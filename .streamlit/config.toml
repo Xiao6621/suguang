@@ -1,0 +1,20 @@
+# 页面主题（2.0 改版）：白天 = 暖白纸 + 琥珀色的光；黑夜由 app.py 里的样式整体换成深蓝底。
+# 这里是 Streamlit 自带组件的底色（白天版）；两套颜色的完整定义在 app.py 的 THEMES 里
+[theme]
+base = "light"
+primaryColor = "#E9A21F"              # 琥珀色：按钮、选中状态、进度条
+backgroundColor = "#FAFAF7"           # 主区域：暖白
+secondaryBackgroundColor = "#F3F2EC"  # 侧边栏、输入框
+textColor = "#1B2232"                 # 正文：带一点蓝的墨色
+borderColor = "#E6E4DC"
+baseRadius = "10px"
+showSidebarBorder = true
+# 正文用系统黑体，标题用宋体（Mac 自带宋体-简；Windows 回退到宋体），不依赖外部字体下载
+font = "'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif"
+headingFont = "'Songti SC', 'STSong', 'Noto Serif CJK SC', 'Source Han Serif SC', 'SimSun', serif"
+
+[client]
+toolbarMode = "viewer"   # 隐藏右上角的 Deploy 等开发者按钮
+
+[server]
+maxUploadSize = 20   # 单个上传文件最大 20MB（在线体验版防滥用；本地需要更大可以改这里）

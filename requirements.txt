@@ -1,0 +1,18 @@
+# 知识库助手用到的所有第三方包
+# 安装（先激活虚拟环境）：pip install -r requirements.txt
+streamlit==1.66.1        # 网页界面
+openai==3.42.1           # 调用 DeepSeek（兼容 OpenAI 接口）
+python-dotenv==1.2.4     # 从 .env 读取 API Key
+pypdf==6.21.4            # 读 PDF
+cryptography==50.0.2     # 读“带加密”的 PDF 时 pypdf 需要它（比如信通院的报告）
+pypdfium2==5.14.0        # 把扫描版 PDF 的一页渲染成图片，交给 OCR
+rapidocr==3.10.0         # OCR：看图认字（PaddleOCR 的模型，用 onnxruntime 运行）
+opencv-python-headless==5.0.0.93   # rapidocr 要用的图像处理库（间接依赖，固定版本，OCR 结果才不会因为重装而变）
+onnxruntime==1.31.1      # 运行 OCR 模型和嵌入模型（fastembed、rapidocr 共用）
+python-docx==1.2.0       # 读 Word
+openpyxl==3.1.5          # 读 Excel
+pandas==3.1.0            # Excel 统计计算（合计/平均/最多最少）
+rank-bm25==0.2.2         # 关键词检索（BM25Plus）
+rjieba==0.2.2            # 中文分词（jieba 的 Rust 版，给关键词检索用）
+fastembed==0.9.1         # 本地嵌入模型（向量检索）
+numpy==2.5.4             # 向量计算

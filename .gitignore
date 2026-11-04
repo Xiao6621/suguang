@@ -1,0 +1,20 @@
+.env
+.venv/
+__pycache__/
+models/
+.DS_Store
+
+# 第三方样本文件（版权归原作者，不随仓库发布，下载链接见 README）
+samples/philips_hd7000_manual.pdf
+samples/caict_cloud_bluebook_2025.pdf
+.streamlit/secrets.toml
+
+# 本机资料库（录入的私人文件、段落和向量），不提交到 git
+library/
+# 第 6 步真实资料评测题（只在本地）
+my_eval/
+# 不公开的过程文档（2.0 的总览、决定、设计、审查原文），只在本地
+docs_private/
+# 评测输出：每次运行在本地生成，不进仓库
+samples/eval_output.md
+samples/eval_output.json
